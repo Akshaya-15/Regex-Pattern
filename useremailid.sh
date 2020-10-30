@@ -1,0 +1,12 @@
+#!/bin/bash -x
+shopt -s extlob
+echo "enter the valid password"
+read password
+pat="^(([A-Za-z0-9]+((\.|\-|\_|\+)?[A-Za-z0-9]?)*[A-Za-z0-9]+)|[A-Za-z0-9]+)@(([A-Za-z0-9]+)+((\.|\-|\_)?([A-Za-z0-9]+)+)*)+\.([A-Za-z]{2,})+$"
+if [[ $password =~ $pat ]]
+then
+   echo "$password is valid"
+else
+   echo "$password is not valid"
+
+fi;
