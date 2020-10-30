@@ -1,0 +1,11 @@
+#!/bin/bash -x
+echo "enter the pincode"
+read pincode
+pat="^[[:digit:]]{6}$"
+if [[ $pincode =~ $pat ]]
+then
+   echo "match"
+else
+   echo "not match"
+
+fi;
